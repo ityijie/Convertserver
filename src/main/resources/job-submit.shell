@@ -1,0 +1,7 @@
+/opt/cloudera/parcels/CDH/bin/spark-submit \
+  --class com.hynoo.spark.ConvertServer \
+  --master spark://namenode1:7077 \
+  --driver-memory 8g \
+  --executor-memory 2g \
+  --total-executor-cores 12 \
+  /var/lib/flume-ng/cyj/Convertserver.jar

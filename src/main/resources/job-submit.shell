@@ -1,3 +1,4 @@
+#spark alone 模式
 /opt/cloudera/parcels/CDH/bin/spark-submit \
   --class com.hynoo.spark.ConvertServer \
   --master spark://namenode1:7077 \

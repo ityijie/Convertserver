@@ -5,3 +5,24 @@
   --executor-memory 2g \
   --total-executor-cores 12 \
   /var/lib/flume-ng/cyj/Convertserver.jar
+
+
+
+
+#client 模式
+/opt/spark/bin/spark-submit \
+  --class com.hynoo.spark.ConvertServer \
+  --master yarn \
+  --executor-memory 2G \
+  --num-executors 2 \
+  /opt/all/Convertserver.jar
+
+
+#cluster 模式 失败
+/opt/spark/bin/spark-submit \
+  --class com.hynoo.spark.ConvertServer \
+  --master yarn \
+  --deploy-mode cluster \
+  --executor-memory 2G \
+  --num-executors 2 \
+  /opt/all/Convertserver.jar

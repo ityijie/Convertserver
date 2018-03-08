@@ -13,8 +13,11 @@
 5.后期可以将submit-port.sh 该脚本集成到 spring-boot中.界面化操作
 
 6.只能以client模式提交，不能以cluster模式提交
-  
-  ps:client是提交的机子作为客户端, cluster是集群随机分配客户端, 如果是集群模式,端口号无法得知要请求那个机子.
+
 
 提交脚本在/src/resources/*
 
+
+good:对于重复提交的job,可以节省申请资源的时间,而且Yarn冗机的情况下,Job可以继续执行
+
+bad:client是提交的机子作为客户端, cluster是集群随机分配客户端, 如果是集群模式,端口号无法得知要请求那个机子
